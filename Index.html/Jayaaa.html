@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+      <input type="text" id="even" placeholder="ENTER YOUR INPUT">
+      <br>
+      <br>
+
+      	<button type="button" onclick= "isEven()">Is Even</button>
+      	<button  type="button" id="odd" onclick= "isOdd()">Is Odd</button>
+      	<button  type="button" id="prime" onclick= "isPrime()">Is Prime</button>
+      		<span id="evenId"></span> 
+      
+</body>
+</html>
+
+<script>
+
+	function isEven(){
+     var even = document.getElementById('even');
+     var evenId = document.getElementById('evenId');
+     var number = parseInt(even.value);
+      console.log(number)
+		if(number % 2 === 0) {
+		    evenId.innerText = "NO. IS EVEN";
+		}
+		else{
+			evenId.innerText = "NO. IS NOT EVEN";
+		}
+	}
+
+	function isOdd(){
+     var odd = document.getElementById('even');
+     var oddId = document.getElementById('evenId');
+     var num = parseInt(odd.value);
+
+		if(num % 2 !== 0) {
+			console.log(num)
+		    evenId.innerText = "NO. IS Odd";
+		}
+		else{
+			evenId.innerText = "NO. IS NOT Odd";
+		}
+	}
+
+	function isPrime(){
+     var prime = document.getElementById('even');
+     var primeId = document.getElementById('evenId');
+     var num = parseInt(prime.value);
+
+
+         for (let i = 2; i <= num/2; i++) {
+         if (num % i === 0) {
+         	console.log(num)
+            evenId.innerText = "NO. IS NOT PRIME";
+            return false;
+         }
+         else{
+            evenId.innerText = "NO. IS PRIME";
+            return true;
+        }
+    }  
+}
+
+
+
+</script>

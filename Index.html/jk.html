@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.box{
+		    border-color: black;
+		    height: 30px;
+		    width: 200px;px;
+		}
+
+		.btn{
+			color: black;
+			background: lightblue;
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+       <input type="text" id="input" class="box" placeholder="ENTER A TEXT">
+       <button type="button" class="btn" onclick="Show()">SHOW</button>
+       <div id="inputId">
+       	
+       </div>
+</body>
+</html>
+
+<script>
+	let input = document.getElementById('input')
+	let inputId = document.getElementById('inputId')
+
+	function Show() {
+	    var string = (input.value);
+		inputId.innerHTML += `<h3 class="line">${string} </h3>`;
+
+		var lines = document.getElementsByClassName('line')
+		for(i=0;i<lines.length;i++)
+		{
+			lines[i].addEventListener("click",function(){
+				this.style.backgroundColor = "yellow";
+			})
+		}
+	}
+
+
+</script>

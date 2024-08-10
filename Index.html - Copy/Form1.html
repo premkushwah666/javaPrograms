@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style>
+    	.error{
+	        color: red;
+        }
+    </style>
+</head>
+<body>
+	<form>
+      <table border="1">
+      	<tr>
+      		<th colspan="2">Registration Form</th>
+      	</tr>
+
+      	<tr>
+      		<td>Name</td>
+      		<td>
+      			<input type="text" id="name" onkeyup="checkName()">
+      			<span class="error" id="name-error"></span> 
+      		</td>
+      	</tr>
+
+      	<tr>
+      		<td>Email</td>
+      		<td>
+      			<input type="text" id="email" onkeyup="checkEmail()">
+                <span class="error" id="email-error"></span>
+      		</td>
+      	</tr>
+
+      	<tr>
+      		<td>Mobile</td>
+      		<td>
+      			<input type="text" id="mobile" onkeyup="checkMobile()" >
+      			<span class="error" id="mobile-error"></span> 
+      		</td>
+      	</tr>
+
+      	<tr>
+      		<td>Gender</td>
+      		<td>
+      			<input type="radio" name="gender" value="male" id="male"> Male
+      			<input type="radio" name="gender" value="female" id="female">Female
+      			<input type="radio" name="gender" value="other" id="other">other
+      			<span class="error" id="gender-error"></span> 
+      		 </td>
+      	</tr>
+
+        <tr>
+      		<td>City</td>
+      		<td>
+      			<select id="city">	
+      				<option>Select</option>
+      				<option value="Indore">Indore</option>
+      				<option value="Ujjain">Ujjain</option>
+      				<option value="Bhopal">Bhopal</option>
+      			</select>
+      			<span class="error" id="city-error"></span> 
+      		</td>
+      	</tr>
+
+      	<tr>
+      		<td>Course</td>
+      		<td>
+      			<input type="checkbox" > 10th
+      			<input type="checkbox" > 12th
+      			<input type="checkbox" > Graduation
+      			<input type="checkbox" > Post Graduation
+      		</td>
+      	</tr>
+
+      	<tr>
+      		<td colspan="2" align="center">
+      			<input type="Submit" value="Save" onclick="return validation()">
+      		</td>
+      	</tr>
+     </table>
+  </form>
+</body>
+</html>
+
+
+<script>
+	var nameId = document.getElementById('name')
+	var emailId = document.getElementById('email')
+	var mobileId = document.getElementById('mobile')
+	var maleId = document.getElementById('male')
+	var femaleId = document.getElementById('female')
+	var otherId = document.getElementById('other')
+	var cityId = document.getElementById('city')
+
+    function validation() {
+    	let temp= true;
+    	if (!checkName())
+    	 {
+    	 	temp = false;
+    	 }
+    	 if(!checkEmail())
+    	 {
+    	 	temp =false;
+    	 }
+    	 if(!checkMobile())
+    	 {
+    	 	temp =false;
+    	 }
+    	 if(!checkGender())
+    	 {
+    	 	temp =false;
+    	 }
+    	  if(!checkCity())
+    	 {
+    	 	temp =false;
+    	 }
+    	return temp; 
+    }
+
+
+    function checkName() {
+		let nameVal = nameId.value;
+		if (nameVal==="") 
+		{
+            document.getElementById('name-error').innerText = "Name Can't be empty!";
+            return false;
+		}
+		else if(nameVal.length<3)
+		{
+			 document.getElementById('name-error').innerText = "Name is too short";
+			 return false;
+		}
+		else{
+		      document.getElementById('name-error').innerText = "";
+		      return true;	
+		}
+	}
+
+
+    function checkEmail() {
+    	let emailVal= emailId.value;
+    	var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    	if(emailVal==="") 
+    	{
+            document.getElementById('email-error').innerText="Email can't be empty!";
+            return false;
+    	}
+        else if(!pattern.test(emailVal))
+        {
+              document.getElementById('email-error').innerText="Invailed Email Id";
+            return false;
+        }
+        else{
+                document.getElementById('email-error').innerText="";
+            return true;
+        }
+    }
+
+
+     function checkMobile() {
+    	let mobileVal= mobileId.value;
+    	var pattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    	if(mobileVal==="") 
+    	{
+            document.getElementById('mobile-error').innerText="Mobile can't be empty!";
+            return false;
+    	}
+        else if(!pattern.test(mobileVal))
+        {
+              document.getElementById('mobile-error').innerText="Invailed mobile Id";
+            return false;
+        }
+        else{
+                document.getElementById('mobile-error').innerText="";
+            return true;
+        }
+    }
+
+
+    function checkGender() {
+    	if(maleId.checked || female.checked)
+    	{
+    		document.getElementById('gender-error').innerText=""
+    		return true;
+    	}
+    	else{
+    		document.getElementById('gender-error').innerText="Please select one of them"
+    		return false;
+    	}
+    }
+
+
+     
+    function checkCity() {
+		let cityVal = cityId.value;
+		if (cityVal==="") 
+		{
+            document.getElementById('city-error').innerText = "Please select city!";
+            return false;
+		}
+		else{
+		      document.getElementById('city-error').innerText ="";
+		      return true;	
+		}	
+	}
+
+	
+</script>

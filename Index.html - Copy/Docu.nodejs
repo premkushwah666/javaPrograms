@@ -1,0 +1,206 @@
+Api = 1
+
+ Method Type  = Post; 
+Api Name = addStudents	;
+
+ (Request) 
+Body = { 
+ name : jaya ;
+ email : jaya14@gmail.com;
+mobile no : 8817252870;
+course_interested : JAVA;
+address : Indore;
+Quilification : BCA;
+DOB : 14-02-2006;
+enrollment date : 30-05:2023;
+status : pending / confirm;
+ (Response)
+ 
+ {
+    "msg": "success",
+    "data": {
+        "acknowledged": true,
+        "insertedId": "_id"
+    }
+}
+
+
+
+Api = 1
+
+ Method Type  = Post; 
+Api Name = addStudents	;
+
+ (Request) 
+Body = { 
+ name : prem ;
+ email : prem18@gmail.com;
+mobile no : 9516560134;
+course_interested : JAVA;
+address : Indore;
+Quilification : btech;
+DOB : 18-12-2003;
+enrollment date : 1-06:2023;
+status : pending / confirm;
+ (Response)
+ 
+ {
+    "msg": "success",
+    "data": {
+        "acknowledged": true,
+        "insertedId": "_id"
+    }
+}
+
+
+Api = 1
+
+ Method Type  = Post; 
+Api Name = addStudents	;
+
+ (Request) 
+Body = { 
+ name : atul ;
+ email : atul10@gmail.com;
+mobile no : 8103706629;
+course_interested : JAVA;
+address : Indore;
+Quilification : BA;
+DOB : 10-10-2004;
+enrollment date : 2-06:2023;
+status : pending / confirm;
+ (Response)
+ 
+ {
+    "msg": "success",
+    "data": {
+        "acknowledged": true,
+        "insertedId": "_id"
+    }
+}
+
+
+Api = 1
+
+ Method Type  = Post; 
+Api Name = addStudents	;
+
+ (Request) 
+Body = { 
+ name : ranju ;
+ email : ranju25@gmail.com;
+mobile no : 6264787898;
+course_interested : JAVA;
+address : Indore;
+Quilification : BBA;
+DOB : 25-05-2006;
+enrollment date : 3-06:2023;
+status : pending / confirm;
+ (Response)
+ 
+ {
+    "msg": "success",
+    "data": {
+        "acknowledged": true,
+        "insertedId": "_id"
+    }
+}
+
+
+
+Api = 2
+
+ Method Type  = Get; 
+Api Name = getAllStudent;
+
+(Response)
+{
+    "msg": "success",
+    "data": [
+        {
+            "_id": "66598a6080b6d15aa4961173",
+            "name": "jaya",
+            "email": "jaya14gmail.com",
+            "phone": "8817252870",
+            "course_interested": "JAVA",
+            "address": "Indore",
+            "Quilification": "BCA",
+            "DOB": "14-02-2006",
+            "enrollment date": "30-05-2023",
+            "status": "pending / confirm"
+        },
+        {
+            "_id": "66598ac680b6d15aa4961174",
+            "name": "prem",
+            "email": "prem18gmail.com",
+            "phone": "9516560134",
+            "course_interested": "JAVA",
+            "address": "Indore",
+            "Quilification": "btech",
+            "DOB": "18-12-2003",
+            "enrollment date": "1-06-2023",
+            "status": "pending / confirm"
+        },
+        {
+            "_id": "66598b1580b6d15aa4961175",
+            "name": "atul",
+            "email": "atul10gmail.com",
+            "phone": "8103706629",
+            "course_interested": "JAVA",
+            "address": "Indore",
+            "Quilification": "BA",
+            "DOB": "10-10-2004",
+            "enrollment date": "2-06-2023",
+            "status": "pending / confirm"
+        },
+        {
+            "_id": "66598b4780b6d15aa4961176",
+            "name": "ranju",
+            "email": "ranju25gmail.com",
+            "phone": "6264787898",
+            "course_interested": "JAVA",
+            "address": "Indore",
+            "Quilification": "BBA",
+            "DOB": "25-05-2006",
+            "enrollment date": "3-06-2023",
+            "status": "pending / confirm"
+        }
+    ]
+}
+
+
+Api = 3
+Method Type = patch;
+Api Name = updateStudent;
+
+(Response)
+{
+    "msg": "success",
+    "data": {
+        "acknowledged": true,
+        "modifiedCount": 1,
+        "upsertedId": null,
+        "upsertedCount": 0,
+        "matchedCount": 1
+    }
+}
+
+
+Api = 4
+Method Type = Delete;
+Api Name = deleteStudent;
+
+(Response)
+{
+    "msg": "success",
+    "data": {
+        "acknowledged": true,
+        "modifiedCount": 1,
+        "upsertedId": null,
+        "upsertedCount": 0,
+        "matchedCount": 1
+    }
+}
+
+
+

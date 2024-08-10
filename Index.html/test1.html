@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>ALL PRODUCT</h3>
+	<div>
+		<ol id="products_list"></ol>
+	</div>
+
+</body>
+</html>
+
+<script src="data.js"></script>
+<script >
+    
+	var product_list = data.products;
+	// let html=""
+	// for(i=0;i<product_list.length;i++)
+	// {
+	// 	html += `<li> ${products_list)[i].title}, ${product_list[i].brand} ${product_list[i].price}</li>`
+	// }
+
+	const searchProductByPrice = (item)=>{
+		
+		if(item.price<500)
+		return true;
+	}
+	product_list = product_list.filter((searchProductByPrice))
+
+	let html = product_list.map((item) => {
+	return `<li> ${item.title} , ${item.brand} ,  ${item.price} </li> `
+	})
+
+	document.getElementById('products_list').innerHTML = html
+
+   
+
+	function searchByBrand(item){
+		if(item.brand==="Apple")
+		return true;
+	}
+
+	// let temp = product_list.filter(searchByBrand);
+	//product_list.filter(searchProductByPrice);
+	console.log(temp);
+</script> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+       
+</body>
+</html>
+
+<script src="promise.js"></script>

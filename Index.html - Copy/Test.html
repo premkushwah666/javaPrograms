@@ -1,0 +1,57 @@
+<!-- < -- <h2>HELLO THIS IS MY FIRST PAGE</h2>
+<input type="text" id="input" value="100">
+
+<script src="Script.js"></script> --> 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.container{
+			margin-left: 100px; 
+		}
+		
+	</style>
+</head>
+<body>
+     <div class="container">
+     	<h2 class="text-line">1. THIS IS MY FIRST STATEMENT</h2>
+     	<h2 class="text-line">2. THIS IS MY SECOND STATEMENT</h2>
+        <h2 class="text-line">3. THIS IS MY THIRD STATEMENT</h2>
+        <h2 class="text-line">4. THIS IS MY FOURTH STATEMENT</h2>
+        <h2 class="text-line">5. THIS IS MY FIFTH STATEMENT</h2>
+        <h2 class="text-line">6. THIS IS MY SIXTH STATEMENT</h2>
+        <div class="text-line">7. THIS IS MY SEVENTH STATEMENT</div>
+     </div>
+</body>
+</html>
+
+
+<script> 
+
+	let headings = document.getElementsByClassName('text-line');
+	//console.log(headings[0])
+	/*for(let i=0;i<headings.length;i++)
+	{
+		headings[i].addEventListener('click',fun)
+                //console.log(this)
+               // this.style.backgroundColor = 'purple';
+    }
+
+        function fun() {
+        	this.style.backgroundColor = 'lightgrey';
+        	//console.log(self.innerHTML)
+        }*/
+        for(let i=0;i<headings.length;i++)
+        {
+        	headings[i].addEventListener('mouseenter',function(){this.style.backgroundColor = 'yellow';
+        	})
+
+        	headings[i].addEventListener('mouseout',function(){this.style.backgroundColor = 'white';
+        	 })
+
+
+        }	
+</script>
